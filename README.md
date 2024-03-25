@@ -30,3 +30,7 @@ On your local machine, in a web browser, navigate to `localhost:9999`. You will 
 
 After approving, you should be able to navigate Jupyter Lab. A sample notebook in the `notebooks` directory contains a demo of the stock [layout-parser](https://layout-parser.github.io/) model.
 
+Example notebooks:
+- Layout Parser
+- Detectron2 : Object Detection and Instance Segmentation
+
