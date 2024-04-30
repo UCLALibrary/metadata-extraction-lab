@@ -23,6 +23,11 @@ RUN pip3 install torchvision==0.17
 
 RUN pip3 install "git+https://github.com/facebookresearch/detectron2.git@v0.6#egg=detectron2"
 
+# OCR libraries
+RUN pip3 install paddlepaddle -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install "paddleocr>=2.0.1"
+
+# Need to run this at end to address pillow version bug
 RUN pip3 uninstall pillow -y
 RUN pip3 install pillow==9.5.0 
 
