@@ -36,6 +36,9 @@ RUN pip3 install https://github.com/amazon-science/ReFinED/archive/refs/tags/V1.
 RUN pip3 uninstall pillow -y
 RUN pip3 install pillow==9.5.0 
 
+# OpenAI for full record creation
+RUN pip3 install openai
+
 USER lab
 WORKDIR /home/lab
 VOLUME ["/home/lab"]
