@@ -4,14 +4,15 @@ services:
     ports:
       - "9999:8888"
     volumes:
-     - ".:/home/lab"
+      - ".:/home/lab"
+    depends_on:
+      - ollama
 
   ollama:
     volumes:
       - ollama:/root/.ollama
-    # Uncomment below to expose Ollama API outside the container stack
-    # ports:
-    #   - 11434:11434
+    ports:
+      - 11434:11434
     container_name: ollama
     pull_policy: always
     tty: true

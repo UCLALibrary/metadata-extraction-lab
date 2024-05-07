@@ -38,9 +38,12 @@ RUN pip3 install pillow==9.5.0
 
 # OpenAI for full record creation
 RUN pip3 install openai
+RUN pip3 install llama-index-llms-ollama
 
 USER lab
 WORKDIR /home/lab
 VOLUME ["/home/lab"]
+
+
 
 CMD jupyter lab --ip=0.0.0.0 --no-browser --ContentsManager.allow_hidden=True
