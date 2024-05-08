@@ -11,6 +11,7 @@ services:
   ollama:
     volumes:
       - ollama:/root/.ollama
+      - ./entrypoint.sh:/usr/local/bin/entrypoint.sh
     ports:
       - 11434:11434
     container_name: ollama
@@ -18,6 +19,7 @@ services:
     tty: true
     restart: unless-stopped
     image: ollama/ollama:latest
+    entrypoint: ["/bin/sh", "-c", "/usr/local/bin/entrypoint.sh"] 
 
   ollama-webui:
     image: ghcr.io/ollama-webui/ollama-webui:main
