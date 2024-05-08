@@ -24,6 +24,7 @@ Build the container image:
 ```
 docker compose up
 ```
+The first time this is run, it may take a little time to download the tinyllama model (640MB). 
 
 JupyterLab will be accessible via port 9999, in the case you have a service already listening on that port.
 
@@ -43,4 +44,5 @@ Example notebooks:
 - [Detectron2 : Object Detection and Instance Segmentation](https://github.com/facebookresearch/detectron2)
 - [Amazon Science ReFinED NER](https://github.com/amazon-science/ReFinED)
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
+- [Ollama](https://github.com/ollama/ollama) with initial tinyllama model
 - Full ocr to metadata record pipeline example
