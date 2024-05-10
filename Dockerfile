@@ -45,7 +45,6 @@ WORKDIR /home/lab
 VOLUME ["/home/lab"]
 
 # Create initial ReFinED  to frontload caching of models
-RUN python -c "print('hello')"
 RUN python -c "from refined.inference.processor import Refined; Refined.from_pretrained(model_name='wikipedia_model',entity_set='wikipedia', use_precomputed_descriptions=False, download_files=True)"
 
 
